@@ -96,7 +96,7 @@ useEffect(() => {
         </Row>
       </Col>
       <Col style={{ height: '500px' }} sm={10}>
-        <div style={{overflowX:"hidden",overflowY:"auto", backgroundColor: '#1c2039', height: '670px', borderWidth: "5px", borderColor: "black" }} className='w-100 mt-2'>
+        <div style={{overflowX:"hidden",overflowY:"auto", backgroundColor: '#1c2039', height: '570px', borderWidth: "5px", borderColor: "black" }} className='w-100 mt-2'>
           {chat_message}
         </div>
         <ButtonToolbar aria-label="Toolbar with button groups">
