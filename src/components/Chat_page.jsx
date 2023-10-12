@@ -74,6 +74,7 @@ function Chatbot() {
           <img className='me-2 ms-2 mt-2' width="50" height="50" src="https://img.icons8.com/3d-fluency/94/robot-1.png" alt="robot-1" />
           <div style={{ backgroundColor: 'white', height: "30px", borderRadius: "5px" }} className="message-bot mt-4"><p className='mb-2 me-2 ms-2'>{cate.response}</p></div>
           </div>
+        <div ref={endOfMessagesRef}></div>
       </div>
       );
       setchatmessage(chat_message => [...chat_message, chat]);
@@ -84,6 +85,9 @@ function Chatbot() {
 useEffect(() => {
   load_message()
 }, []);
+    useEffect(()=>{
+    endOfMessagesRef.current?.scrollIntoView({ behavior: "instant" });
+  },[load_message])
   return (
     <Row className='w-100'>
       <Col style={{ backgroundColor: '#252c48', height: '651px' }} sm={2}>
