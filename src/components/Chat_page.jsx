@@ -86,7 +86,7 @@ useEffect(() => {
 }, []);
   return (
     <Row className='w-100'>
-      <Col style={{ backgroundColor: '#252c48', height: '670px' }} sm={2}>
+      <Col style={{ backgroundColor: '#252c48', height: '500px' }} sm={2}>
         <Row className='mt-2'>
           <Col sm={1}></Col>
           <Col sm={10}>
@@ -95,7 +95,7 @@ useEffect(() => {
           <Col sm={1}></Col>
         </Row>
       </Col>
-      <Col style={{ height: '600px' }} sm={10}>
+      <Col style={{ height: '500px' }} sm={10}>
         <div style={{overflowX:"hidden",overflowY:"auto", backgroundColor: '#1c2039', height: '670px', borderWidth: "5px", borderColor: "black" }} className='w-100 mt-2'>
           {chat_message}
         </div>
