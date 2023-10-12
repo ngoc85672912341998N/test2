@@ -6,14 +6,14 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Form from 'react-bootstrap/Form';
-import { useState,useEffect } from 'react';
+import { useState,useEffect, useRef } from 'react';
 import axios from "axios";
 
 function Chatbot() {
   console.log(window.screen.height);
   const [input, setinput] = useState('')
   const input2 = e => setinput(e.target.value)
-
+  const endOfMessagesRef = useRef(null);
   const [chat_message, setchatmessage] = useState([])
  
   let chat;
@@ -74,7 +74,7 @@ function Chatbot() {
           <img className='me-2 ms-2 mt-2' width="50" height="50" src="https://img.icons8.com/3d-fluency/94/robot-1.png" alt="robot-1" />
           <div style={{ backgroundColor: 'white', height: "30px", borderRadius: "5px" }} className="message-bot mt-4"><p className='mb-2 me-2 ms-2'>{cate.response}</p></div>
           </div>
-        <div ref={endOfMessagesRef}></div>
+          <div ref={endOfMessagesRef}></div>
       </div>
       );
       setchatmessage(chat_message => [...chat_message, chat]);
@@ -85,12 +85,12 @@ function Chatbot() {
 useEffect(() => {
   load_message()
 }, []);
-    useEffect(()=>{
-    endOfMessagesRef.current?.scrollIntoView({ behavior: "instant" });
-  },[load_message])
+useEffect(()=>{
+  endOfMessagesRef.current?.scrollIntoView({ behavior: "instant" });
+},[load_message])
   return (
     <Row className='w-100'>
-      <Col style={{ backgroundColor: '#252c48', height: '651px' }} sm={2}>
+      <Col style={{ backgroundColor: '#252c48', height: '730px' }} sm={2}>
         <Row className='mt-2'>
           <Col sm={1}></Col>
           <Col sm={10}>
@@ -99,8 +99,8 @@ useEffect(() => {
           <Col sm={1}></Col>
         </Row>
       </Col>
-      <Col style={{ height: '500px' }} sm={10}>
-        <div style={{overflowX:"hidden",overflowY:"auto", backgroundColor: '#1c2039', height: '570px', borderWidth: "5px", borderColor: "black" }} className='w-100 mt-2'>
+      <Col style={{ height: '670px' }} sm={10}>
+        <div style={{overflowX:"hidden",overflowY:"auto", backgroundColor: '#1c2039', height: '670px', borderWidth: "5px", borderColor: "black" }} className='w-100 mt-2'>
           {chat_message}
         </div>
         <ButtonToolbar aria-label="Toolbar with button groups">
