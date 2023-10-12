@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState } from 'react';
 import Swal from 'sweetalert2'
 import Form from 'react-bootstrap/Form';
-import Button from '@mui/material/Button';
+import Button from 'react-bootstrap/Button';
 function Loginpage() {
   const [login, setlogin] = useState('')
   const Loginchange = e => setlogin(e.target.value)
@@ -110,7 +110,7 @@ function Loginpage() {
         <GoogleLogin className='m-2' style={{textAlign:'center'}} onSuccess={responseMessage} onError={errorMessage} />
         </center>
         <center>
-        <Button onClick={()=>login12(login)} className='mt-3' variant="contained">Login</Button>
+        <Button onClick={()=>login12(login)} className='mt-3'>Login</Button>
         </center>
       </div>
     </>
