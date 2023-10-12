@@ -4,7 +4,7 @@ import jwt_decode from "jwt-decode";
 import axios from "axios";
 import { useState } from 'react';
 import Swal from 'sweetalert2'
-import TextField from '@mui/material/TextField';
+import Form from 'react-bootstrap/Form';
 import Button from '@mui/material/Button';
 function Loginpage() {
   const [login, setlogin] = useState('')
@@ -105,7 +105,7 @@ function Loginpage() {
         <br />
         <center>
         <h2 style={{fontWeight:'700'}} className='mb-4'>Sign in to Chat bot</h2>
-        <TextField onChange={Loginchange} className='mb-3' style={{color:'white',width:"400px"}} id="filled-basic" label="Email" variant="filled" />
+        <Form.Control onChange={Loginchange} className='mb-3' style={{color:'white',width:"400px"}} id="filled-basic" placeholder="Email" />
         
         <GoogleLogin className='m-2' style={{textAlign:'center'}} onSuccess={responseMessage} onError={errorMessage} />
         </center>
