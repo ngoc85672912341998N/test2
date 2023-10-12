@@ -86,7 +86,7 @@ useEffect(() => {
 }, []);
   return (
     <Row className='w-100'>
-      <Col style={{ backgroundColor: '#252c48', height: '730px' }} sm={2}>
+      <Col style={{ backgroundColor: '#252c48', height: '670px' }} sm={2}>
         <Row className='mt-2'>
           <Col sm={1}></Col>
           <Col sm={10}>
